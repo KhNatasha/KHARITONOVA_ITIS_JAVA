@@ -2,26 +2,18 @@ import java.util.Arrays;
 
 public class swap0 {
     public static void main(String[] args) {
-        int n = 10;
 
-        int[] arr = {0, 1, 7, 9, 4, 0, 5, 2, 0, 3};
-
-
-        System.out.println(Arrays.toString(arr));
-    }
-
-    static void sort(int[] array){
-        int n = array.length;
-        for (int j = 0; j < n; j++) {
-            int indexOfMin = j;
-            for (int i = j; i < n; i++) {
-                if ( i == 0) {
-                i = (i-1) - (i-1)*2;
+               int[] arr = {1, 2, 0, 3};
+                swap(arr);
+                System.out.println(Arrays.toString(arr));
             }
-            int buf = array[j];
-            array[j] = array[indexOfMin];
-            array[indexOfMin] = buf;
+
+            static void swap(int[] array) {
+                for (int i = 0; i < array.length; i++) {
+                    if (array[i] == 0) {
+                        array[i] = array[i - 1] * (-1);
+                    }
+                }
+            }
         }
-    }
-}
-}
+

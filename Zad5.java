@@ -1,25 +1,21 @@
+
 public class Zad5 {
     public static void main(String[] args) {
-        int[] arr1 = {4, 9, 2, 0, 4, 7, 5};
-        int[] arr2 = {7, 1, 3};
-        System.out.println(repeat(arr1));
-        System.out.println(repeat(arr2));
-    }
-
-    static boolean repeat(int[] arr) {
-
-        boolean k = false;
-        for (int i = 0; i < arr.length & !k; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (i == j) {
-                    k = true;
-                }
+             String[] arr = {"f", "awad", "ej"};
+                System.out.println(exists(arr));
             }
-
+            static boolean exists (String arr[]){
+                boolean b = false;
+                for(int j = 0; j < arr.length; j++){
+                    for(int i = j+1; i < arr.length; i++)
+                        if(arr[i] .equals (arr[j]))
+                            b = true;
+                }
+                return b;
+            }
         }
-        return k;
-     }
-}
+
+
 
 
 
